@@ -14,5 +14,8 @@ public class IdentifiableBase {
     @Id
     @GeneratedValue(generator = "custom-generator",
             strategy = GenerationType.IDENTITY)
+    @GenericGenerator(
+            name = "custom-generator",
+            strategy = "com.example.calpyte.masterservice.entity.BaseIdentifierGenerator")
     protected String id;
 }
