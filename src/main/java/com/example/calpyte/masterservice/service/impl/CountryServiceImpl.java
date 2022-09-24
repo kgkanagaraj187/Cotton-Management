@@ -29,17 +29,11 @@ public class CountryServiceImpl implements CountryService {
 
     @Override
     public void saveCountry(Country country) throws CustomException {
-        if(country.getNames()!=null && country.getNames().size() > 0){
-            List<Country> countryList =  country.getNames().stream().map(countryName -> {
-                country.setName(countryName);
-                return country;
-            }).collect(Collectors.toList());
-            countryRepository.saveAll(countryList);
-        }else{
+
             validate(country);
             Mapper.setAuditable(country);
             countryRepository.save(country);
-        }
+
     }
 
     private void validate(Country country) throws CustomException {
