@@ -24,7 +24,6 @@ import java.util.List;
 public class Country extends AuditableBase implements Serializable {
     private String name;
 
-
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "country", cascade = CascadeType.ALL)
     @JsonIgnoreProperties("country")
     private List<State> state;

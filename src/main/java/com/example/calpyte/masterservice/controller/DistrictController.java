@@ -4,21 +4,12 @@ package com.example.calpyte.masterservice.controller;
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
 import com.example.calpyte.masterservice.entity.District;
-import com.example.calpyte.masterservice.entity.State;
 import com.example.calpyte.masterservice.masterexception.CustomException;
-import com.example.calpyte.masterservice.repo.DistrictRepository;
 import com.example.calpyte.masterservice.service.DistrictService;
-import com.example.calpyte.masterservice.service.StateService;
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 

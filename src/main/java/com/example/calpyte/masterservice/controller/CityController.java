@@ -9,6 +9,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/city")
 public class CityController {
-    @Autowired
-     private CityService cityService;
+
 }

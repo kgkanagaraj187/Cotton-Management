@@ -81,13 +81,8 @@ public class CountryServiceImpl implements CountryService {
         }
     }
 
-    @Override
-    public TableResponse getCountries(PaginationDTO pagination) {
-        TableResponse response = null;
-        return response;
-    }
 
-    /*@Override
+    @Override
     public TableResponse getCountries(PaginationDTO pagination) {
         TableResponse response;
         Pageable paging = PageRequest.of(pagination.getPageNo() - 1, pagination.getPageSize());
@@ -101,7 +96,7 @@ public class CountryServiceImpl implements CountryService {
                     new ArrayList<>());
         }
         return response;
-    }*/
+    }
 
     @Override
     public List<Country> findByRevNo(Long revNo) {
@@ -116,7 +111,7 @@ public class CountryServiceImpl implements CountryService {
         return eCountry;
     }
 
-   /* private Specification<> getSpecifications(PaginationDTO pagination) {
+    private Specification<Country> getSpecifications(PaginationDTO pagination) {
         List<SearchCriteria> params = new ArrayList<>(pagination.getFilter());
 
         if (params.size() == 0) {
@@ -139,6 +134,6 @@ public class CountryServiceImpl implements CountryService {
         }
 
         return result;
-    }*/
+    }
 
 }
