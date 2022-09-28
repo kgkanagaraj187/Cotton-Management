@@ -26,7 +26,9 @@ private String name;
     @JsonIgnoreProperties("city")
     private District district;
 
-
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "city", cascade = CascadeType.ALL)
+    @JsonIgnore
+    private List<Village> villages;
 
 
 

@@ -2,6 +2,9 @@ package com.example.calpyte.masterservice.repo;
 
 import com.example.calpyte.masterservice.entity.District;
 import com.example.calpyte.masterservice.entity.State;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -16,4 +19,5 @@ public interface DistrictRepository extends JpaRepository<District,String> {
     @Query("FROM District c WHERE c.revisionNo > :revNo")
     List<District> findByRevisionNoGreaterThan(@Param("revNo") Long revNo);
 
+    Page<District> findAll(Specification<District> specifications, Pageable paging);
 }

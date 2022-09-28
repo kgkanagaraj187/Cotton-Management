@@ -1,6 +1,7 @@
 package com.example.calpyte.masterservice.service;
 
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
+import com.example.calpyte.masterservice.dto.pagination.TableResponse;
 import com.example.calpyte.masterservice.entity.District;
 import com.example.calpyte.masterservice.entity.State;
 import com.example.calpyte.masterservice.masterexception.CustomException;
@@ -11,7 +12,7 @@ public interface DistrictService {
     void saveDistrict(District district) throws CustomException;
 
 
-    List<District> getAllDistricts(PaginationDTO pagination);
+    TableResponse getAllDistricts(PaginationDTO pagination);
 
     List<District> findAllById(List<String> ids);
 
@@ -22,4 +23,7 @@ public interface DistrictService {
     void delete(String id) throws CustomException;
 
     List<District> getAllDistrict();
+    List<District> getAllDistricts();
+   TableResponse getDistrict(PaginationDTO pagination);
+
 }

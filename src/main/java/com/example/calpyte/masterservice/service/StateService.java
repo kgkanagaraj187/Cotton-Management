@@ -13,7 +13,7 @@ public interface StateService {
      void saveState(State state) throws CustomException;
 
 
-    List<State> getAllStates(PaginationDTO pagination);
+  TableResponse getAllStates(PaginationDTO pagination);
 
     List<State> findAllById(List<String> ids);
 
@@ -24,6 +24,8 @@ public interface StateService {
     void delete(String id) throws CustomException;
 
     List<State> getAllStates();
+
+  TableResponse getStates(PaginationDTO pagination);
 
 
 }

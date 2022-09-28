@@ -2,10 +2,10 @@ package com.example.calpyte.masterservice.util;
 
 import com.example.calpyte.masterservice.entity.AuditableBase;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+
 import java.util.Date;
 import java.util.List;
 
