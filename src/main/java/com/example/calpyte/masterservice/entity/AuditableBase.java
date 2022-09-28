@@ -41,4 +41,6 @@ public class AuditableBase extends IdentifiableBase {
 
     @Column(columnDefinition = "boolean default false")
     private Boolean isDeleted;
-}
+
+
+    }
