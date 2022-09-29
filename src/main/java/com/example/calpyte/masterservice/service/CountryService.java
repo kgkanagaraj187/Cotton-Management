@@ -3,6 +3,7 @@ package com.example.calpyte.masterservice.service;
 
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
+import com.example.calpyte.masterservice.entity.City;
 import com.example.calpyte.masterservice.entity.Country;
 import com.example.calpyte.masterservice.masterexception.CustomException;
 
@@ -23,4 +24,5 @@ public interface CountryService {
     TableResponse getCountries(PaginationDTO pagination);
 
     List<Country> findByRevNo(Long revNo);
+
 }
