@@ -2,7 +2,6 @@ package com.example.calpyte.masterservice.controller;
 
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
-import com.example.calpyte.masterservice.entity.State;
 import com.example.calpyte.masterservice.entity.Village;
 import com.example.calpyte.masterservice.masterexception.CustomException;
 import com.example.calpyte.masterservice.service.VillageService;
