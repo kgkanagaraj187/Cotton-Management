@@ -4,7 +4,6 @@ package com.example.calpyte.masterservice.controller;
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
 import com.example.calpyte.masterservice.entity.Certification;
-import com.example.calpyte.masterservice.entity.Variety;
 import com.example.calpyte.masterservice.masterexception.CustomException;
 import com.example.calpyte.masterservice.service.CertificationService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,8 +51,8 @@ public class CertificationController {
     }
 
     @PostMapping(value = "/")
-    public ResponseEntity<TableResponse> getCertification(@RequestBody PaginationDTO pagination){
-        return new ResponseEntity<>(certificationService.getCertification(pagination), HttpStatus.ACCEPTED);
+    public ResponseEntity<TableResponse> getCertifications(@RequestBody PaginationDTO pagination){
+        return new ResponseEntity<>(certificationService.getCertifications(pagination), HttpStatus.ACCEPTED);
     }
 }
 

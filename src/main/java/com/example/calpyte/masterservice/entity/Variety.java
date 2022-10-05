@@ -12,7 +12,7 @@ import java.io.Serializable;
 
 @Entity
 @Data
-@Table(name="variety")
+@Table(name = "variety")
 @Where(clause = "is_deleted = false")
 
 public class Variety extends AuditableBase  implements Serializable {

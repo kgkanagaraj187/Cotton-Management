@@ -3,7 +3,6 @@ package com.example.calpyte.masterservice.service;
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
 import com.example.calpyte.masterservice.entity.Certification;
-import com.example.calpyte.masterservice.entity.Variety;
 import com.example.calpyte.masterservice.masterexception.CustomException;
 
 import java.util.List;
@@ -21,8 +20,12 @@ public interface CertificationService {
 
     void delete(String id) throws CustomException;
 
+    TableResponse getCertifications(PaginationDTO pagination);
+
+
     TableResponse getCertification(PaginationDTO pagination);
 
-
     List<Certification> getAllCertifications();
+
+
 }

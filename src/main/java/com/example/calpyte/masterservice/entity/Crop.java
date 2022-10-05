@@ -19,8 +19,8 @@ import java.util.List;
 public class Crop extends AuditableBase implements Serializable {
     private String name;
 
-    @OneToMany(mappedBy = "crop")
-    private List<Variety> variety;
+  @OneToMany(mappedBy = "crop")
+  private List<Variety> variety;
 //@OneToMany(fetch = FetchType.LAZY, mappedBy = "crop", cascade = CascadeType.ALL)
 //@JsonIgnoreProperties("crop")
 //private List<Variety> variety;

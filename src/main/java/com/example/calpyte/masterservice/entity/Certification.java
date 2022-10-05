@@ -6,11 +6,10 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.List;
 
 @Entity
 @Data
-@Table(name="certification")
+@Table(name = "certification")
 @Where(clause = "is_deleted = false")
 public class Certification extends AuditableBase implements Serializable {
     private String name;
@@ -19,7 +18,7 @@ public class Certification extends AuditableBase implements Serializable {
 //    private List<Variety> variety;
 
     @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "crop_id", referencedColumnName = "id")
+    @JoinColumn(name = "variety_id", referencedColumnName = "id")
     @JsonIgnoreProperties("certification")
     private Variety variety;
 }

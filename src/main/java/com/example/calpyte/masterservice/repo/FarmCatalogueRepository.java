@@ -1,6 +1,6 @@
 package com.example.calpyte.masterservice.repo;
 
-import com.example.calpyte.masterservice.entity.Certification;
+import com.example.calpyte.masterservice.entity.FarmCatalogue;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.domain.Specification;
@@ -9,11 +9,11 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CertificationRepository extends JpaRepository<Certification, String>, JpaSpecificationExecutor<Certification> {
+public interface FarmCatalogueRepository extends JpaRepository<FarmCatalogue, String>, JpaSpecificationExecutor<FarmCatalogue>{
 
-    Certification findByName(String name);
+    FarmCatalogue findByName(String name);
 
-    Certification save(Certification certification);
+    FarmCatalogue save(FarmCatalogue farmCatalogue);
 
-    Page<Certification> findAll(Specification<Certification> specifications, Pageable paging);
+    Page<FarmCatalogue> findAll(Specification<FarmCatalogue> specifications, Pageable paging);
 }

@@ -4,7 +4,6 @@ import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.SearchCriteria;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
 import com.example.calpyte.masterservice.entity.Certification;
-import com.example.calpyte.masterservice.entity.Variety;
 import com.example.calpyte.masterservice.masterexception.CustomException;
 import com.example.calpyte.masterservice.repo.CertificationRepository;
 import com.example.calpyte.masterservice.service.CertificationService;
@@ -88,6 +87,11 @@ public class CertificationServiceImpl implements CertificationService {
 
     @Override
     public List<Certification> getAllCertifications() {
+        return null;
+    }
+
+    @Override
+    public TableResponse getCertifications(PaginationDTO pagination) {
         return null;
     }
 

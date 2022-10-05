@@ -1,10 +1,9 @@
 package com.example.calpyte.masterservice.controller;
 
 
-import com.example.calpyte.masterservice.dto.CropDTO;
+
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
-import com.example.calpyte.masterservice.entity.Country;
 import com.example.calpyte.masterservice.entity.Crop;
 import com.example.calpyte.masterservice.masterexception.CustomException;
 import com.example.calpyte.masterservice.service.CropService;
@@ -27,6 +26,12 @@ public class CropController {
         cropService.saveCrop(crop);
         return new ResponseEntity<Crop>(HttpStatus.CREATED);
     }
+
+//    @PostMapping(value = "/save")
+//    public ResponseEntity<?> saveCrop(@RequestBody CropDTO crop) throws CustomException {
+//        cropService.saveCrop(crop);
+//        return new ResponseEntity<Crop>(HttpStatus.CREATED);
+//    }
 
     @RequestMapping(value = "/crops", method = RequestMethod.GET)
     public ResponseEntity<List<Crop>> getAllCrops() {

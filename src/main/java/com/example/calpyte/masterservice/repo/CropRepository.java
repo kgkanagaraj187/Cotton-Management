@@ -1,6 +1,6 @@
 package com.example.calpyte.masterservice.repo;
 
-import com.example.calpyte.masterservice.entity.Country;
+
 import com.example.calpyte.masterservice.entity.Crop;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;

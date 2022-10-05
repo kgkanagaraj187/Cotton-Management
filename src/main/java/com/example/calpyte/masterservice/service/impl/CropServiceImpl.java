@@ -3,10 +3,8 @@ package com.example.calpyte.masterservice.service.impl;
 import com.example.calpyte.masterservice.dto.pagination.PaginationDTO;
 import com.example.calpyte.masterservice.dto.pagination.SearchCriteria;
 import com.example.calpyte.masterservice.dto.pagination.TableResponse;
-import com.example.calpyte.masterservice.entity.Country;
 import com.example.calpyte.masterservice.entity.Crop;
 import com.example.calpyte.masterservice.masterexception.CustomException;
-import com.example.calpyte.masterservice.repo.CropRepository;
 import com.example.calpyte.masterservice.service.CropService;
 import com.example.calpyte.masterservice.specification.CountrySpecification;
 import com.example.calpyte.masterservice.util.Mapper;
@@ -26,7 +24,7 @@ import java.util.stream.Collectors;
 @Service
 public class CropServiceImpl implements CropService {
     @Autowired
-    private CropRepository cropRepository;
+    private com.example.calpyte.masterservice.repo.CropRepository cropRepository;
 
     @Override
     public List<Crop> getAllCrops() {
@@ -78,9 +76,9 @@ public class CropServiceImpl implements CropService {
         Pageable paging = PageRequest.of(pagination.getPageNo() - 1, pagination.getPageSize());
         Page<Crop> cropPaged = cropRepository.findAll(getSpecifications(pagination) , paging);
         if (cropPaged.hasContent()) {
-            List<Crop> countryList = cropPaged.getContent();
+            List<Crop> cropList = cropPaged.getContent();
             response = new TableResponse(pagination.getDraw(), (int) cropPaged.getTotalElements(), (int) cropPaged.getTotalElements(),
-                    countryList);
+                    cropList);
         } else {
             response = new TableResponse(pagination.getDraw(), (int) cropPaged.getTotalElements(), (int) cropPaged.getTotalElements(),
                     new ArrayList<>());
